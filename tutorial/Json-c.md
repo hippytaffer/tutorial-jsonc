@@ -5,7 +5,7 @@ Json-c is a c library aiming to provide an object oriented like approach to usin
 
 The home page for json-c: [https://github.com/json-c/json-c/wiki.]()
 
-Linux users may be able to install json-c using their OS's packaging system. Doing so may not result in the most recent version of the library tho. If that concerns you, install by following the installations instructions found on the github page. Note, the documentation can be generated directly from the source codes using Doxygen or accessed [online](http://json-c.github.io/json-c/).
+Linux users may be able to install json-c using their OS's packaging system. Doing so may not result in the most recent version of the library tho. If that concerns you, install by following the installation instructions found on the github page. Note, the documentation can be generated directly from the source codes using Doxygen or accessed [online](http://json-c.github.io/json-c/).
 
 I will be using [Bodhi Linux 5.1](https://www.bodhilinux.com/) based on Ubuntu 18.04 as my Distro in this tutorial and gcc as my compiler. So to install:
 
@@ -18,9 +18,9 @@ This installs all the development (header) files as well as the library itself (
 
 For reference, the version installed is *0.12.1-1.3ubuntu0.3*. Note, this corresponds to *Version 0.12.1*, released Jun 7, 2016 as is per the case for Ubuntu LTS releases. Rather dated but sufficient enough for this tutorial.
 
-Without much explanation, as it is rather self explanatory, our first json-c program, _*json-version.c*_:
+Without much explanation, as it is rather self explanatory, lets write our first json-c program, _*json-version.c*_:
 
-````
+```
 #include <stdio.h>
 #include <json-c/json.h>
 
@@ -31,11 +31,11 @@ main(void)
    printf("Version Number: %d\n", json_c_version_num());
    return 1;
 }
-````
+```
 
 To compile:
 
 ```
 gcc json-version.c -ljson-c -o json-version
 ```
-Now run json-version to see what version of json-c you have installed. Not very exciting but fuck it, it is a start.
+Now run json-version, to see what version of json-c you have installed. Not very exciting but fuck it, it is a start.

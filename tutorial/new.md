@@ -1,6 +1,6 @@
 # Creating and saving a JSON object
 
-It is perhaps traditional when discussing an Object Oriented library to first introduce creating and deleting a new object. But, we have taken a backwards appproach: Introducing initializing a json\_object from a file or string first and then going to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object and adding data to it and saving it as a file.
+It is perhaps traditional when discussing an Object Oriented library to first introduce creating and deleting a new object. But, we have taken a backwards appproach: Introducing initializing a json\_object from a file or string first and then going to parsing the JSON data contained within. Now it is time to introducing creating a new JSON object, adding data to it and saving it as a file.
 
 ## Json Constructors
 
@@ -10,7 +10,7 @@ Not surprisingly, the constructor for a new _*json_object*_ is:
 
 The documentation says this function creates:
 
->a new empty object with a reference count of 1. The caller of this object initially has sole ownership. Remember, when using json_object_object_add or json_object_array_put_idx, ownership will transfer to the object/array. Call json_object_get if you want to maintain shared ownership or also add this object as a child of multiple objects or arrays. Any ownerships you acquired but did not transfer must be released through json_object_put.
+>A new empty object with a reference count of 1. The caller of this object initially has sole ownership. Remember, when using json_object_object_add or json_object_array_put_idx, ownership will transfer to the object/array. Call json_object_get if you want to maintain shared ownership or add this object as a child of multiple objects or arrays. Any ownerships you acquired but did not transfer must be released through json_object_put.
 
 
 Consider:
@@ -41,7 +41,7 @@ The json representation:
 
 ```
 
-After creating a _*json\_object*_, you usually intialize it the data you want to store in it. Remember the data is always in name/value pairs where name is a string and value is another _*json_object*_ of a particular _*json_type*_. The json-c function for this operation is:
+After creating a _*json\_object*_, you usually intialize it with the data you want to store in it. Remember that the data is always in name/value pairs where name is a string and value is another _*json_object*_ of a particular _*json_type*_. The json-c function for this operation is:
 
 - void json_object_object_add(json_object *obj, const char * key, json_object *val)
 
@@ -63,9 +63,9 @@ This creates the JSON:
 
 This examples covers the user case of adding a key with _*json\_type\_null*_ value to a *_json\_object*_.
 
-Functions for adding other *_json\_types*_ are listed below and there usage should be intuitively obvious:
+Functions for adding other *_json\_types*_ are listed below and their usage should be intuitively obvious:
 
-1. json_object\* json_object_new_boolean(json_bool b)
+- json_object\* json_object_new_boolean(json_bool b)
 - json_object\* json_object_new_double(double d)
 - json_object\* json_object_new_int(int32_t i)
 - json_object\* json_object_new_int64(int64_t i)

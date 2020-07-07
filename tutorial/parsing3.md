@@ -1,6 +1,6 @@
 # Parsing a Json object - part 4: JSON strings
 
-At last, we have all the tools needed to parse a JSON file. Yet, the most common usage of json is to request the data from a website, download the data and  store in a string.  Parsing, processing and displaying the data are the last things we do. For such a usage, we wouldn't use the _*json\_object\_from\_file*_ function. Admittedly we could: download the file and store it somewhere and then load the file into a JSON object . All this is unnecessary, wasteful and slow. Json-c has a function to create a _*json\_object*_ from a C string:
+At last, we have all the tools needed to parse a JSON file. Yet, the most common usage of json is to request data from a website, download the data and store it in a string.  Parsing, processing and displaying the data are the last things we do. For such a usage, we wouldn't use the _*json\_object\_from\_file*_ function. Admittedly we could: download the file and store it somewhere and then load the file into a JSON object . All this is unnecessary, wasteful and slow. Json-c has a function to create a _*json\_object*_ from a C string:
 
 - json_object* json_tokener_parse(const char *str) 
 
@@ -53,7 +53,7 @@ The json object to string:
 
 ```
 
-Not much to say here, other than it is a hassle to escape all the quote characters in a JSON representation for usage in a C program. This would not be a problem for downloading and storing JSON from the internet.
+There's not much to say here, other than it is a hassle to escape all the quote characters in a JSON representation for usage in a C program. However, this is not a problem for downloading and storing JSON from the internet.
 
 Problem:
 

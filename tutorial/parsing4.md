@@ -1,6 +1,6 @@
-# Parsing a Json object - part 5: Iteration thru a JSON obj
+# Parsing a Json object - part 5: Iteration through a JSON obj
 
-Looking at the parsing code discussed so far, you might wonder if there is an easier way to parse the file rather checking every attribute one at a time. Since we have been printing out the values for every attribute in the JSON file or string, shouldn't it be possible to simply iterate over the objects name/value pairs. Similar to a for loop only for json\_objects.
+Looking at the parsing code discussed so far, you might wonder if there is an easier way to parse the file, rather checking every attribute one at a time. Since we have been printing out the values for every attribute in the JSON file or string, shouldn't it be possible to simply iterate over the objects name/value pairs, similar to a for loop only for json\_objects?
 
 The answer is, naturally, yes.
 
@@ -13,7 +13,7 @@ json_object_object_foreach(obj, key, val)
 }
 ```
 
-where obj is the JSON object you want to parse; key and value correspond to key: value pairs. However, key and value are placeholds and not actual variables you have to declare. They are declared by the macro itself, and you can use them inside the loop. Key is a char\* and val is a json_object\*. You can choose any _variable_ names to correspond to key and value if you wish.
+Where obj is the JSON object you want to parse; key and value correspond to key:value pairs. However, key and value are placeholds and not actual variables that you have to declare. They are declared by the macro itself, and you can use them inside the loop. Key is a char\* and val is a json_object\*. You can choose any _variable_ names to correspond to key and value if you wish.
 
 ## json_object_object_foreach: json-parse06.c
 
@@ -47,13 +47,13 @@ children  -> [ ]
 spouse  -> (null)
 ```
 
-We have looped over every Name/value pairs in our _*contact.json*_ file. The code is simple and easy to understand. As you may have noticed, the brackets are not needed if only a single statement is executed in the loop, just as is the case with other c style loops.
+We have looped over every Name/value pairs in our _*contact.json*_ file. The code is simple and easy to understand. As you may have noticed, the brackets are not needed if only a single statement is executed in the loop, just as is the case with other C style loops.
 
 In cases where the value is another json\_object or a json\_array, the obj or array is not parsed. Simply printed as a string. Hence, the program is not generic in nature. However, we have all the tools to implement a recursive function to fully parse our _*contact.json*_ file, or in general any JSON.
 
 ## json_object_object_foreach: json-parse07.c
 
-So let's apply this idea to our previous example _*json-parse04.c*_ and parse the entire file as before, printing out the name/value pairs.
+So lets apply this idea to our previous example _*json-parse04.c*_ and parse the entire file as before, printing out the name/value pairs.
 
 ```
 #include <stdio.h>

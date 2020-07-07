@@ -36,7 +36,7 @@
   
   > Print all values of all objects in contact.json:-*json-parse05.c*_ (left as excersise)
  
-- [Parsing a Json object - part 5: Iteration thru a JSON obj](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing4.md)
+- [Parsing a Json object - part 5: Iteration through a JSON obj](https://github.com/rbtylee/tutorial-jsonc/blob/master/tutorial/parsing4.md)
 
   > Illustrate iteration over a JSON object: example
   
